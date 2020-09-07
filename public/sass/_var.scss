@@ -1,0 +1,93 @@
+
+:root {
+  --main-color: #ED7E2E;
+  --gutter:20px;
+  --actual-color:#74c143;
+  --rent-color: #dfc600;
+  --sales-color:#e45a56;
+  --signed-color:#62ba46;
+  --in-work-color:#e3cd40;
+  --paid--color:#2f66d2;
+  --input--color:#c6c8c5;
+  --border-color:rgba(6, 43, 94, 0.14);
+}
+
+
+$maincolor:#ED7E2E;
+$gutter:20px;
+
+@mixin headline-p {
+  font-size: 15px;
+  font-family: "Roboto", serif;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+%custom-select {
+  .custom-select {
+    position: relative;
+
+  }
+
+  .custom-select select {
+    display: none;
+  }
+
+  .select-selected {
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #1d1e1c;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #ed7e2e transparent transparent transparent;
+  }
+
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #ed7e2e transparent;
+    top: 7px;
+  }
+
+  .select-items div,.select-selected {
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+  .select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    color: #1d1e1c;
+    line-height: 19px;
+  }
+
+
+  .select-hide {
+    display: none;
+  }
+
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+}

@@ -1,0 +1,539 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  overflow-x: hidden; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+
+a, a:hover, a:focus, a:active {
+  outline: none !important;
+  text-decoration: none;
+  color: #000; }
+
+:root {
+  --main-color: #ED7E2E;
+  --gutter:20px;
+  --actual-color:#74c143;
+  --rent-color: #dfc600;
+  --sales-color:#e45a56;
+  --signed-color:#62ba46;
+  --in-work-color:#e3cd40;
+  --paid--color:#2f66d2;
+  --input--color:#c6c8c5;
+  --border-color:rgba(6, 43, 94, 0.14); }
+
+.add-selection {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 265px 1fr;
+  position: relative; }
+  .add-selection .content {
+    position: relative;
+    z-index: 1;
+    background: #FAFAFA; }
+    .add-selection .content .top__line {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 50px 30px 0 50px;
+      /*style the arrow inside the select element:*/
+      /*point the arrow upwards when the select box is open (active):*/
+      /*style the items (options), including the selected item:*/
+      /*style items (options):*/ }
+      .add-selection .content .top__line .btn--submit {
+        background-color: var(--main-color);
+        width: 166px;
+        height: 40px;
+        border-radius: 3px;
+        display: grid;
+        justify-self: end; }
+        .add-selection .content .top__line .btn--submit a {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-items: center;
+          font-size: 16px;
+          line-height: 19px;
+          color: #FFFFFF; }
+      .add-selection .content .top__line .back__to_prev a {
+        display: grid;
+        grid-template-columns: 10px 1fr;
+        grid-gap: 10px;
+        align-items: center; }
+        .add-selection .content .top__line .back__to_prev a i {
+          font-size: 12px;
+          color: var(--main-color); }
+        .add-selection .content .top__line .back__to_prev a p {
+          font-style: normal;
+          font-size: 14px;
+          line-height: 16px;
+          text-decoration-line: underline;
+          color: var(--main-color); }
+      .add-selection .content .top__line .custom-select {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        display: grid;
+        justify-self: center; }
+      .add-selection .content .top__line .custom-select select {
+        display: none;
+        /*hide original SELECT element:*/ }
+      .add-selection .content .top__line .select-selected {
+        height: 36px;
+        border: 1px solid #E8E8E8;
+        border-radius: 2px;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 19px; }
+      .add-selection .content .top__line .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #000000 transparent transparent transparent; }
+      .add-selection .content .top__line .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #000000 transparent;
+        top: 7px; }
+      .add-selection .content .top__line .select-items div, .add-selection .content .top__line .select-selected {
+        color: #000000;
+        padding: 6px 16px;
+        border: 2px solid transparent;
+        border-color: #eff1ef;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px; }
+      .add-selection .content .top__line .select-items {
+        position: absolute;
+        background-color: white;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        font-size: 16px;
+        line-height: 19px; }
+      .add-selection .content .top__line .select-hide {
+        display: none; }
+      .add-selection .content .top__line .select-items div:hover, .add-selection .content .top__line .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1); }
+      .add-selection .content .top__line .selection__description {
+        position: absolute;
+        left: -75px;
+        bottom: 50%;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1D1E1C; }
+      .add-selection .content .top__line .wrap__select .select__image a {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: var(--main-color); }
+      .add-selection .content .top__line .wrap__select p {
+        font-size: 12px;
+        line-height: 14px;
+        color: #727272; }
+    .add-selection .content .container {
+      width: 100%;
+      padding: 50px 50px 150px 200px; }
+      .add-selection .content .container .container__offer {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+        display: grid; }
+        .add-selection .content .container .container__offer .offer__description {
+          position: absolute;
+          left: -204px;
+          top: 5px; }
+      .add-selection .content .container .add__images .line {
+        display: grid;
+        grid-template-columns: min-content min-content min-content min-content min-content;
+        grid-gap: 10px;
+        margin-bottom: 10px; }
+        .add-selection .content .container .add__images .line label input {
+          display: none; }
+        .add-selection .content .container .add__images .line label .image__item {
+          cursor: pointer;
+          display: grid;
+          align-items: center;
+          width: 100%;
+          padding: 10px;
+          border-radius: 3px;
+          transition: all .7s ease-in-out;
+          background: #eeeeee; }
+          .add-selection .content .container .add__images .line label .image__item:hover {
+            transition: all .5s ease-in-out;
+            background: #dfe9f7; }
+      .add-selection .content .container .container__price {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        grid-gap: 15px; }
+        .add-selection .content .container .container__price label {
+          position: relative; }
+          .add-selection .content .container .container__price label i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #1d1e1c;
+            opacity: 0.25; }
+        .add-selection .content .container .container__price input {
+          width: 150px;
+          height: 36px;
+          background: #FFFFFF;
+          border: 1px solid #E8E8E8;
+          border-radius: 2px; }
+        .add-selection .content .container .container__price .price__description p {
+          margin: 0;
+          color: #727272; }
+        .add-selection .content .container .container__price .price__description span {
+          color: #6fb600;
+          font-family: Roboto, serif;
+          font-size: 17px;
+          font-weight: 900; }
+          .add-selection .content .container .container__price .price__description span i {
+            font-size: 14px; }
+      .add-selection .content .container .middle__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px; }
+        .add-selection .content .container .middle__content .left__side .item__line {
+          display: grid;
+          grid-template-columns: min-content min-content min-content min-content;
+          grid-gap: 10px;
+          align-items: center;
+          position: relative; }
+          .add-selection .content .container .middle__content .left__side .item__line .item__description {
+            position: absolute;
+            top: 5px;
+            left: -110px;
+            text-align: end; }
+            .add-selection .content .container .middle__content .left__side .item__line .item__description .description__item {
+              height: 45px;
+              padding-bottom: 10px; }
+          .add-selection .content .container .middle__content .left__side .item__line input {
+            width: 95px;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 2px;
+            text-align: center; }
+            .add-selection .content .container .middle__content .left__side .item__line input::placeholder {
+              color: #c6c8c5; }
+          .add-selection .content .container .middle__content .left__side .item__line span {
+            color: #1d1e1c;
+            opacity: 0.25; }
+        .add-selection .content .container .middle__content .left__side .checkbox__line {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          /*Outer box of the fake checkbox*/
+          /*Checkmark of the fake checkbox*/
+          /*Hide the checkmark by default*/
+          /*Unhide on the checked state*/
+          /*Adding focus styles on the outer-box of the fake checkbox*/ }
+          .add-selection .content .container .middle__content .left__side .checkbox__line input {
+            text-align: start; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox input[type="checkbox"] {
+            opacity: 0;
+            width: 0; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox label {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-right: 25px; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox label::before,
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox label::after {
+            position: absolute;
+            content: "";
+            /*Needed for the line-height to take effect*/
+            display: inline-block; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox label::before {
+            height: 16px;
+            width: 16px;
+            border: 2px solid grey;
+            border-radius: 2px;
+            right: 0;
+            top: 5px; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox label::after {
+            height: 5px;
+            width: 9px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+            right: 4px;
+            top: 9px; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox input[type="checkbox"] + label::after {
+            content: none; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox input[type="checkbox"]:checked + label::after {
+            content: "";
+            color: #FFFFFF; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox input[type="checkbox"]:checked + label::before {
+            background-color: #ed7e2e;
+            border: 2px solid #ed7e2e; }
+          .add-selection .content .container .middle__content .left__side .checkbox__line .checkbox input[type="checkbox"]:focus + label::before {
+            /*     outline: rgb(59, 153, 252) auto 5px; */ }
+        .add-selection .content .container .middle__content .left__side .input__line {
+          display: grid;
+          grid-template-columns: 1fr;
+          position: relative; }
+          .add-selection .content .container .middle__content .left__side .input__line input {
+            width: 200px;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 2px; }
+          .add-selection .content .container .middle__content .left__side .input__line label {
+            width: 200px;
+            position: relative;
+            margin-bottom: 10px; }
+            .add-selection .content .container .middle__content .left__side .input__line label i {
+              position: absolute;
+              right: 20px;
+              top: 9px;
+              cursor: pointer;
+              color: #1d1e1c;
+              opacity: 0.25; }
+          .add-selection .content .container .middle__content .left__side .input__line .item__description {
+            position: absolute;
+            top: 8px;
+            left: -171px;
+            text-align: end; }
+            .add-selection .content .container .middle__content .left__side .input__line .item__description .description__item {
+              height: 45px;
+              padding-bottom: 10px; }
+        .add-selection .content .container .middle__content .left__side .item__line_bottom {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr; }
+          .add-selection .content .container .middle__content .left__side .item__line_bottom label {
+            width: 100%;
+            max-width: 350px;
+            position: relative;
+            margin-bottom: 10px; }
+            .add-selection .content .container .middle__content .left__side .item__line_bottom label i {
+              position: absolute;
+              right: 20px;
+              top: 9px;
+              cursor: pointer;
+              color: #1d1e1c;
+              opacity: 0.25; }
+          .add-selection .content .container .middle__content .left__side .item__line_bottom input {
+            width: 100%;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 2px; }
+
+
+          .add-selection .content .container .middle__content .left__side .item__line_bottom input::selection{
+            
+            color: #ED7E2E;
+            
+          }
+            
+           .add-selection .content .container .middle__content .left__side .item__line_bottom label div.box{
+                position: absolute;
+                background-color: white;
+                z-index: 1;
+                width: 100%;
+                max-height: 200px;
+                padding: 15px;
+                overflow-y: auto;
+                border: 1px solid #1D1E1C;
+           } 
+            
+           .add-selection .content .container .middle__content .left__side .item__line_bottom label div.box p:first-child{
+            margin-top: 0;
+           } 
+            
+           .add-selection .content .container .middle__content .left__side .item__line_bottom label div.box a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+           } 
+            
+            
+          .add-selection .content .container .middle__content .left__side .item__line_bottom .item__description {
+            position: absolute;
+            top: 8px;
+            left: -90px;
+            text-align: end; }
+            .add-selection .content .container .middle__content .left__side .item__line_bottom .item__description .description__item {
+              height: 45px;
+              padding-bottom: 10px; }
+        .add-selection .content .container .middle__content .right__side .map img {
+          width: 100%; }
+        .add-selection .content .container .middle__content .right__side .send--smg textarea {
+          resize: none;
+          width: 100%;
+          height: 65%;
+          background: #fff;
+          border: 1px solid #E8E8E8;
+          border-radius: 3px;
+          outline: none;
+          padding: 25px 0 0 25px;
+          font-family: Gotham-Pro, serif;
+          font-size: 18px; }
+          .add-selection .content .container .middle__content .right__side .send--smg textarea::placeholder {
+            color: #1D1E1C;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            font-family: Roboto, serif; }
+        .add-selection .content .container .middle__content .right__side .send--smg .msg__items {
+          display: grid;
+          grid-template-columns: 1fr 1fr; }
+          .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a {
+            width: 170px;
+            display: grid; }
+            
+          .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a.download {
+            word-wrap: anywhere;
+            color: #ED7E2E;
+            text-decoration: underline;
+            }
+            
+            
+            
+            .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a input {
+              display: none; }
+            .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a label {
+              cursor: pointer;
+              display: grid;
+              grid-template-columns: 30px 3fr; }
+            .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a p {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 16px;
+              text-decoration-line: underline;
+              color: var(--main-color);
+              margin: 0; }
+          .add-selection .content .container .middle__content .right__side .send--smg .msg__items .btn--send {
+            background-color: var(--main-color);
+            width: 166px;
+            height: 40px;
+            display: grid;
+            justify-self: end;
+            border-radius: 3px; }
+            .add-selection .content .container .middle__content .right__side .send--smg .msg__items .btn--send a {
+              display: grid;
+              grid-template-columns: 1fr 2fr;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              justify-items: center;
+              font-size: 16px;
+              line-height: 19px;
+              color: #FFFFFF; }
+
+.add-selection .content .container .container__offer, .add-selection .content .container .container__price, .add-selection .content .container .middle__content .left__side .item__line {
+  /*style the arrow inside the select element:*/
+  /*point the arrow upwards when the select box is open (active):*/
+  /*style the items (options), including the selected item:*/
+  /*style items (options):*/
+  /*hide the items when the select box is closed:*/ }
+  .add-selection .content .container .container__offer .custom-select, .add-selection .content .container .container__price .custom-select, .add-selection .content .container .middle__content .left__side .item__line .custom-select {
+    position: relative;
+    z-index: 5; }
+  .add-selection .content .container .container__offer .custom-select select, .add-selection .content .container .container__price .custom-select select, .add-selection .content .container .middle__content .left__side .item__line .custom-select select {
+    display: none;
+    /*hide original SELECT element:*/ }
+  .add-selection .content .container .container__offer .select-selected, .add-selection .content .container .container__price .select-selected, .add-selection .content .container .middle__content .left__side .item__line .select-selected {
+    height: 36px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 19px; }
+  .add-selection .content .container .container__offer .select-selected:after, .add-selection .content .container .container__price .select-selected:after, .add-selection .content .container .middle__content .left__side .item__line .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #ed7e2e transparent transparent transparent; }
+  .add-selection .content .container .container__offer .select-selected.select-arrow-active:after, .add-selection .content .container .container__price .select-selected.select-arrow-active:after, .add-selection .content .container .middle__content .left__side .item__line .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #ed7e2e transparent;
+    top: 7px; }
+  .add-selection .content .container .container__offer .select-items div, .add-selection .content .container .container__price .select-items div, .add-selection .content .container .middle__content .left__side .item__line .select-items div, .add-selection .content .container .container__offer .select-selected, .add-selection .content .container .container__price .select-selected, .add-selection .content .container .middle__content .left__side .item__line .select-selected {
+    color: #c6c8c5;
+    padding: 6px 16px;
+    border: 2px solid #eff1ef;
+    cursor: pointer;
+    user-select: none; }
+  .add-selection .content .container .container__offer .select-items, .add-selection .content .container .container__price .select-items, .add-selection .content .container .middle__content .left__side .item__line .select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all 0.5s ease-in-out; }
+  .add-selection .content .container .container__offer .select-hide, .add-selection .content .container .container__price .select-hide, .add-selection .content .container .middle__content .left__side .item__line .select-hide {
+    display: none; }
+  .add-selection .content .container .container__offer .select-items div:hover, .add-selection .content .container .container__price .select-items div:hover, .add-selection .content .container .middle__content .left__side .item__line .select-items div:hover, .add-selection .content .container .container__offer .same-as-selected, .add-selection .content .container .container__price .same-as-selected, .add-selection .content .container .middle__content .left__side .item__line .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1); }
+    
+    #map{
+        height: 270px;
+        width: 100%;
+    }
+    
+    .add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a.hide{
+        display: none;
+    }
+    
+.add-selection .content .container .middle__content .right__side .send--smg .msg__items .items__depiction a.del-file{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}    
+input {
+  outline:none;
+}

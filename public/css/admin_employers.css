@@ -1,0 +1,303 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  overflow-x: hidden; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+
+a, a:hover, a:focus, a:active {
+  outline: none !important;
+  text-decoration: none;
+  color: #000; }
+
+:root {
+  --main-color: #ED7E2E;
+  --gutter:20px;
+  --actual-color:#74c143;
+  --rent-color: #dfc600;
+  --sales-color:#e45a56;
+  --signed-color:#62ba46;
+  --in-work-color:#e3cd40;
+  --paid--color:#2f66d2;
+  --input--color:#c6c8c5;
+  --border-color:rgba(6, 43, 94, 0.14); }
+
+.employers {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 265px 1fr;
+  position: relative; }
+  .employers .offer__header {
+    padding: 50px 150px;
+    background: #FAFAFA; }
+    .employers .offer__header .top__line {
+      position: relative; }
+      .employers .offer__header .top__line input {
+        width: 100%;
+        height: 40px;
+        background: #FFFFFF;
+        border: 1px solid #E8E8E8;
+        border-radius: 2px;
+        top: 0; }
+        .employers .offer__header .top__line input::placeholder {
+          opacity: 0.25;
+          color: #1d1e1c; }
+        .employers .offer__header .top__line input[type="text"] {
+          padding-left: 20px; }
+      .employers .offer__header .top__line .btn--search {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        width: 109px;
+        background: var(--main-color);
+        border-radius: 2px;
+        top: 0; }
+        .employers .offer__header .top__line .btn--search a {
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          width: 100%;
+          height: 100%; }
+    .employers .offer__header .event__buttons {
+      display: grid;
+      grid-template-columns: max-content max-content max-content;
+      margin: 50px 0 50px 0;
+      //padding-left: 40px; }
+      .employers .offer__header .event__buttons .btn {
+        width: 178px;
+        height: 40px;
+        border-radius: 3px;
+        margin-right: 45px; }
+        .employers .offer__header .event__buttons .btn a {
+          display: grid;
+          width: 100%;
+          height: 100%;
+          grid-template-columns: 1fr 2fr;
+          justify-items: center;
+          align-items: center; 
+                    cursor: pointer;
+          }
+          .employers .offer__header .event__buttons .btn a p {
+            margin: 0; }
+      .employers .offer__header .event__buttons .btn--add {
+        background: #a4be8f; }
+      .employers .offer__header .event__buttons .btn--change {
+        background: #fbe33a; }
+      .employers .offer__header .event__buttons .btn--del {
+        background: #ff707e; }
+    .employers .offer__header .data__table .data__item {
+      overflow: visible;
+      width: 100%;
+      height: 35px;
+      display: grid;
+      grid-template-columns: 15px 1fr 1fr 200px 120px 120px 120px;
+      position: relative;
+      border-radius: 4px;
+      background: #FAFAFA;
+      text-align: center; }
+      .employers .offer__header .data__table .data__item:nth-child(1) .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid gray;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .employers .offer__header .data__table .data__item p {
+        margin: 0; }
+      .employers .offer__header .data__table .data__item .checkbox {
+        display: grid; }
+        .employers .offer__header .data__table .data__item .checkbox i {
+          position: absolute;
+          left: 35px;
+          top: 8px;
+          font-size: 12px;
+          color: gray; }
+      .employers .offer__header .data__table .data__item input {
+        display: none; }
+      .employers .offer__header .data__table .data__item .checkbox input[type="checkbox"] {
+        opacity: 0;
+        width: 0; }
+      .employers .offer__header .data__table .data__item .checkbox label {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 22px; }
+      .employers .offer__header .data__table .data__item .checkbox label::before,
+      .employers .offer__header .data__table .data__item .checkbox label::after {
+        position: absolute;
+        content: "";
+        display: inline-block; }
+      .employers .offer__header .data__table .data__item .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid #e8e8e8;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .employers .offer__header .data__table .data__item .checkbox label::after {
+        height: 5px;
+        width: 9px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        left: 14px;
+        top: 12px; }
+      .employers .offer__header .data__table .data__item .checkbox input[type="checkbox"] + label::after {
+        content: none; }
+      .employers .offer__header .data__table .data__item .checkbox input[type="checkbox"]:checked + label::after {
+        content: "";
+        color: #FFFFFF; }
+      .employers .offer__header .data__table .data__item .checkbox input[type="checkbox"]:checked + label::before {
+        background-color: #ed7e2e;
+        border: 2px solid #ed7e2e; }
+      .employers .offer__header .data__table .data__item .users {
+        display: grid;
+        align-items: center; }
+      .employers .offer__header .data__table .data__item .full-name {
+        border-right: solid 1px var(--border-color);
+        border-left: solid 1px var(--border-color);
+        display: grid;
+        align-items: center; }
+      .employers .offer__header .data__table .data__item .registration {
+        border-right: solid 1px var(--border-color);
+        display: grid;
+        align-items: center;
+        justify-items: center; }
+      .employers .offer__header .data__table .data__item .rented {
+        border-right: solid 1px var(--border-color);
+        display: grid;
+        align-items: center; }
+      .employers .offer__header .data__table .data__item .sales {
+        display: grid;
+        align-items: center;
+        border-right: solid 1px var(--border-color);
+        border-left: solid 1px var(--border-color); }
+      .employers .offer__header .data__table .data__item .point-head, .employers .offer__header .data__table .data__item .sale-head, .employers .offer__header .data__table .data__item .reg-head, .employers .offer__header .data__table .data__item .rent-head {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        align-items: center; }
+    .employers .offer__header .data__table .item--hover {
+      position: relative; }
+      .employers .offer__header .data__table .item--hover .hidden {
+        position: absolute;
+        height: 40px;
+        Margin: auto;
+        Right: 0;
+        Top: 32px;
+        grid-template-columns: 35px 60px 35px 35px;
+        padding: 0 5px;
+        align-items: center;
+        justify-items: center;
+        background: var(--main-color);
+        display: none;
+        z-index: 5;
+        border-radius: 4px; }
+        .employers .offer__header .data__table .item--hover .hidden i {
+          cursor: pointer; }
+        .employers .offer__header .data__table .item--hover .hidden .plus .btn, .employers .offer__header .data__table .item--hover .hidden .minus .btn, .employers .offer__header .data__table .item--hover .hidden .block .btn {
+          border: none;
+          font-family: inherit;
+          font-size: inherit;
+          color: inherit;
+          background: none;
+          outline: none;
+          position: relative;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s; }
+        .employers .offer__header .data__table .item--hover .hidden .plus .btn:after, .employers .offer__header .data__table .item--hover .hidden .minus .btn:after, .employers .offer__header .data__table .item--hover .hidden .block .btn:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s; }
+        .employers .offer__header .data__table .item--hover .hidden .plus .btn-2, .employers .offer__header .data__table .item--hover .hidden .minus .btn-2, .employers .offer__header .data__table .item--hover .hidden .block .btn-2 {
+          cursor: pointer;
+          background: #f8f8f8;
+          border-radius: 4px;
+          display: grid;
+          width: 26px;
+          height: 26px;
+          box-shadow: 0 3px var(--input--color);
+          align-items: center;
+          font-size: 23px;
+          line-height: 1.15;
+          z-index: 5; }
+        .employers .offer__header .data__table .item--hover .hidden .plus .btn-2i, .employers .offer__header .data__table .item--hover .hidden .minus .btn-2i, .employers .offer__header .data__table .item--hover .hidden .block .btn-2i {
+          padding: 0; }
+        .employers .offer__header .data__table .item--hover .hidden .plus .btn-2i:active, .employers .offer__header .data__table .item--hover .hidden .minus .btn-2i:active, .employers .offer__header .data__table .item--hover .hidden .block .btn-2i:active {
+          top: 1px; }
+        .employers .offer__header .data__table .item--hover .hidden .numbers {
+          background: #f8f8f8;
+          border-radius: 4px;
+          padding: 0 20px;
+          height: 70%;
+          display: grid;
+          align-items: center; }
+        .employers .offer__header .data__table .item--hover .hidden .minus {
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          font-size: 21px; }
+        .employers .offer__header .data__table .item--hover .hidden .block {
+          display: grid;
+          justify-items: center;
+          align-items: center; }
+          .employers .offer__header .data__table .item--hover .hidden .block i {
+            font-size: 15px; }
+      .employers .offer__header .data__table .item--hover:hover {
+        background: var(--main-color); }
+        .employers .offer__header .data__table .item--hover:hover .hidden {
+          display: grid; }
+    .employers .offer__header .data__table .item--hover:nth-child(2n) {
+      background-color: #ffffff; }
+      .employers .offer__header .data__table .item--hover:nth-child(2n):hover {
+        background: var(--main-color); }
+
+input {
+  outline:none !important;
+}

@@ -1,0 +1,317 @@
+@import "_components.scss";
+@import "_var.scss";
+
+//
+
+
+.employers {
+   width: 100%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 265px 1fr;
+   position: relative;
+   & .offer__header {
+      padding: 50px 200px;
+      background: #FAFAFA;
+      & .top__line {
+         position: relative;
+         & input {
+            width: 100%;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 2px;
+            top: 0;
+            &::placeholder {
+               opacity: 0.25;
+               color: #1d1e1c;
+            }
+            &[type="text"] {
+               padding-left: 20px;
+            }
+         }
+       & .btn--search {
+          position: absolute;
+          right: 0;
+          height: 40px;
+          width: 109px;
+          background: var(--main-color);
+          border-radius: 2px;
+          top: 0;
+          & a {
+             display: grid;
+             justify-items: center;
+             align-items: center;
+             width: 100%;
+             height: 100%;
+          }
+       }
+      }
+    & .event__buttons {
+       display: grid;
+       grid-template-columns: max-content max-content max-content;
+       margin:50px 0 50px 0;
+       padding-left: 40px;
+       & .btn {
+          width: 178px;
+          height: 40px;
+          border-radius: 3px;
+
+          margin-right: 45px;
+          & a {
+             display: grid;
+             width: 100%;
+             height: 100%;
+             grid-template-columns: 1fr 2fr;
+             justify-items: center;
+             align-items: center;
+             & p {
+                margin: 0;
+             }
+          }
+       }
+       & .btn--add {
+          background: #a4be8f;
+       }
+       & .btn--change {
+          background: #fbe33a;
+       }
+       & .btn--del {
+          background: #ff707e;
+       }
+    }
+    & .data__table {
+       & .data__item {
+          overflow: visible;
+          width: 100%;
+          height: 35px;
+          display: grid;
+          grid-template-columns: 15px 1fr 1fr 200px 120px 120px 120px;
+          position: relative;
+          border-radius: 4px;
+          background: #FAFAFA;
+          text-align: center;
+          &:nth-child(1) {
+             .checkbox label::before{
+                height: 16px;
+                width: 16px;
+                border: 2px solid gray;
+                border-radius: 2px;
+                left: 10px;
+                top: 8px;
+             }
+          }
+          & p {
+             margin: 0;
+          }
+          & .checkbox {
+             display: grid;
+             & i {
+                position: absolute;
+                left: 35px;
+                top: 8px;
+                font-size: 12px;
+                color: gray;
+             }
+          }
+          & input {
+             display: none;
+          }
+          & .checkbox input[type="checkbox"] {
+             opacity: 0;
+             width: 0;
+          }
+
+          .checkbox label {
+             position: relative;
+             display: inline-block;
+             cursor: pointer;
+             padding-left: 22px;
+          }
+
+          .checkbox label::before,
+          .checkbox label::after {
+             position: absolute;
+             content: "";
+             display: inline-block;
+          }
+
+          .checkbox label::before{
+             height: 16px;
+             width: 16px;
+             border: 2px solid #e8e8e8;
+             border-radius: 2px;
+             left: 10px;
+             top: 8px;
+          }
+
+          .checkbox label::after {
+             height: 5px;
+             width: 9px;
+             border-left: 2px solid;
+             border-bottom: 2px solid;
+
+             transform: rotate(-45deg);
+
+             left: 14px;
+             top: 12px;
+          }
+
+          .checkbox input[type="checkbox"] + label::after {
+             content: none;
+          }
+
+          .checkbox input[type="checkbox"]:checked + label::after {
+             content: "";
+             color: #FFFFFF;
+          }
+          .checkbox input[type="checkbox"]:checked + label::before {
+             background-color: #ed7e2e;
+             border: 2px solid #ed7e2e;
+
+          }
+          & .users {
+             display: grid;
+             align-items: center;
+          }
+          & .full-name {
+             border-right: solid 1px var(--border-color);
+             border-left: solid 1px var(--border-color);
+             display: grid;
+             align-items: center;
+          }
+          & .registration {
+             border-right: solid 1px var(--border-color);
+             display: grid;
+             align-items: center;
+             justify-items: center;
+          }
+          & .rented {
+             border-right: solid 1px var(--border-color);
+             display: grid;
+             align-items: center;
+          }
+          & .sales {
+             display: grid;
+             align-items: center;
+             border-right: solid 1px var(--border-color);
+             border-left: solid 1px var(--border-color);
+          }
+          & .point-head , .sale-head ,.reg-head ,.rent-head {
+             display: grid;
+             grid-template-columns: 30px 1fr;
+             align-items: center;
+          }
+       }
+       & .item--hover {
+          position: relative;
+          & .hidden {
+             position: absolute;
+             height: 40px;
+             Margin:auto;
+             Right:0;
+             Top:32px;;
+             grid-template-columns: 35px 60px 35px 35px;
+             padding: 0 5px;
+             align-items: center;
+             justify-items: center;
+             background: var(--main-color);
+             display: none;
+             z-index: 5;
+             border-radius: 4px;
+             & i {
+                cursor: pointer;
+             }
+             & .plus , .minus ,.block {
+
+                & .btn {
+
+                   border: none;
+                   font-family: inherit;
+                   font-size: inherit;
+                   color: inherit;
+                   background: none;
+                   outline: none;
+                   position: relative;
+                   -webkit-transition: all 0.3s;
+                   -moz-transition: all 0.3s;
+                   transition: all 0.3s;
+                }
+
+                & .btn:after {
+                   content: '';
+                   position: absolute;
+                   z-index: -1;
+                   -webkit-transition: all 0.3s;
+                   -moz-transition: all 0.3s;
+                   transition: all 0.3s;
+                }
+
+                & .btn-2 {
+                   cursor: pointer;
+                   background: #f8f8f8;
+                   border-radius: 4px;
+                   display: grid;
+                   width: 26px;
+                   height: 26px;
+                   box-shadow: 0 3px var(--input--color);
+                   align-items: center;
+                   font-size: 23px;
+                   line-height: 1.15;
+                   z-index: 5;
+                }
+
+                .btn-2i {
+                   padding: 0;
+                }
+
+                .btn-2i:hover {
+                }
+
+                .btn-2i:active {
+                   top: 1px;
+                }
+             }
+             & .numbers {
+                background: #f8f8f8;
+                border-radius: 4px;
+                padding: 0 20px;
+                height: 70%;
+                display: grid;
+                align-items: center;
+             }
+             & .minus {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                font-size: 21px;
+             }
+             & .block {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                & i {
+                   font-size: 15px;
+                }
+             }
+
+          }
+          &:hover {
+             background: var(--main-color);
+             & .hidden {
+                display: grid;
+             }
+          }
+       }
+       & .item--hover:nth-child(2n) {
+          background-color: #ffffff;
+          &:hover {
+             background: var(--main-color);
+          }
+       }
+    }
+   }
+}
+
+
+

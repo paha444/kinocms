@@ -1,0 +1,354 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  overflow-x: hidden; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+
+a, a:hover, a:focus, a:active {
+  outline: none !important;
+  text-decoration: none;
+  color: #000; }
+
+:root {
+  --main-color: #ED7E2E;
+  --gutter:20px;
+  --actual-color:#74c143;
+  --rent-color: #dfc600;
+  --sales-color:#e45a56;
+  --signed-color:#62ba46;
+  --in-work-color:#e3cd40;
+  --paid--color:#2f66d2;
+  --input--color:#c6c8c5;
+  --border-color:rgba(6, 43, 94, 0.14); }
+
+.setting-section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 265px 1fr;
+  position: relative; }
+  .setting-section .offer__header {
+    padding: 50px 150px;
+    background: #FAFAFA; }
+    .setting-section .offer__header .back__to_prev a {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      grid-gap: 10px;
+      align-items: center; }
+      .setting-section .offer__header .back__to_prev a i {
+        font-size: 12px;
+        color: var(--main-color); }
+      .setting-section .offer__header .back__to_prev a p {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: var(--main-color); }
+    .setting-section .offer__header .data__table .data__item {
+      width: 100%;
+      height: 35px;
+      display: grid;
+      grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px;
+      position: relative;
+      border-radius: 4px;
+      background: #FAFAFA;
+      text-align: center; }
+      .setting-section .offer__header .data__table .data__item:nth-child(1) .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid gray;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .setting-section .offer__header .data__table .data__item p {
+        margin: 0; }
+      .setting-section .offer__header .data__table .data__item .checkbox {
+        display: grid; }
+        .setting-section .offer__header .data__table .data__item .checkbox i {
+          position: absolute;
+          left: 35px;
+          top: 8px;
+          font-size: 12px;
+          color: gray; }
+      .setting-section .offer__header .data__table .data__item input {
+        display: none; }
+      .setting-section .offer__header .data__table .data__item .checkbox input[type="checkbox"] {
+        opacity: 0;
+        width: 0; }
+      .setting-section .offer__header .data__table .data__item .checkbox label {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 30px; }
+      .setting-section .offer__header .data__table .data__item .checkbox label::before,
+      .setting-section .offer__header .data__table .data__item .checkbox label::after {
+        position: absolute;
+        content: "";
+        display: inline-block; }
+      .setting-section .offer__header .data__table .data__item .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid #e8e8e8;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .setting-section .offer__header .data__table .data__item .checkbox label::after {
+        height: 5px;
+        width: 9px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        left: 14px;
+        top: 12px; }
+      .setting-section .offer__header .data__table .data__item .checkbox input[type="checkbox"] + label::after {
+        content: none; }
+      .setting-section .offer__header .data__table .data__item .checkbox input[type="checkbox"]:checked + label::after {
+        content: "";
+        color: #FFFFFF; }
+      .setting-section .offer__header .data__table .data__item .checkbox input[type="checkbox"]:checked + label::before {
+        background-color: #ed7e2e;
+        border: 2px solid #ed7e2e; }
+      .setting-section .offer__header .data__table .data__item .checkbox input[type="checkbox"]:focus + label::before {
+        /*     outline: rgb(59, 153, 252) auto 5px; */ }
+      .setting-section .offer__header .data__table .data__item .offer, .setting-section .offer__header .data__table .data__item .rent, .setting-section .offer__header .data__table .data__item .employee, .setting-section .offer__header .data__table .data__item .value, .setting-section .offer__header .data__table .data__item .users, .setting-section .offer__header .data__table .data__item .article, .setting-section .offer__header .data__table .data__item .settings, .setting-section .offer__header .data__table .data__item .role {
+        display: grid;
+        justify-items: center; }
+      .setting-section .offer__header .data__table .data__item .role {
+        align-items: center; }
+      .setting-section .offer__header .data__table .data__item .offer {
+        border-right: solid 1px var(--border-color);
+        border-left: solid 1px var(--border-color);
+        display: grid; }
+      .setting-section .offer__header .data__table .data__item .rent {
+        border-right: solid 1px var(--border-color);
+        display: grid; }
+      .setting-section .offer__header .data__table .data__item .employee {
+        border-right: solid 1px var(--border-color);
+        display: grid; }
+      .setting-section .offer__header .data__table .data__item .value, .setting-section .offer__header .data__table .data__item .users, .setting-section .offer__header .data__table .data__item .article, .setting-section .offer__header .data__table .data__item .settings {
+        display: grid;
+        border-right: solid 1px var(--border-color); }
+      .setting-section .offer__header .data__table .data__item .hidden {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        font-size: 12px; }
+        .setting-section .offer__header .data__table .data__item .hidden i {
+          cursor: pointer; }
+    .setting-section .offer__header .data__table .data__item:nth-child(1) .offer, .setting-section .offer__header .data__table .data__item:nth-child(1) .rent, .setting-section .offer__header .data__table .data__item:nth-child(1) .employee, .setting-section .offer__header .data__table .data__item:nth-child(1) .value, .setting-section .offer__header .data__table .data__item:nth-child(1) .users, .setting-section .offer__header .data__table .data__item:nth-child(1) .article, .setting-section .offer__header .data__table .data__item:nth-child(1) .settings, .setting-section .offer__header .data__table .data__item:nth-child(1) .role {
+      display: grid;
+      align-items: center; }
+    .setting-section .offer__header .data__table .item--hover:nth-child(2n) {
+      background-color: #ffffff; }
+    .setting-section .offer__header .estate__table .item--hover:nth-child(2n) {
+      background-color: #ffffff; }
+    .setting-section .offer__header .estate__table .estate__item {
+      width: 100%;
+      height: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      border-radius: 4px;
+      background: #FAFAFA;
+      text-align: center; }
+      .setting-section .offer__header .estate__table .estate__item .activity {
+        border-right: solid 1px var(--border-color);
+        border-left: solid 1px var(--border-color);
+        display: grid; }
+      .setting-section .offer__header .estate__table .estate__item .close {
+        display: grid;
+        justify-items: end;
+        align-items: center; }
+        .setting-section .offer__header .estate__table .estate__item .close i {
+          font-size: 12px;
+          padding-right: 5px; }
+      .setting-section .offer__header .estate__table .estate__item .type {
+        display: grid;
+        align-items: center; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox input[type="checkbox"] {
+        opacity: 0;
+        width: 0; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox label::before,
+      .setting-section .offer__header .estate__table .estate__item .checkbox label::after {
+        position: absolute;
+        content: "";
+        display: inline-block; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid #e8e8e8;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox label::after {
+        height: 5px;
+        width: 9px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        left: 14px;
+        top: 12px; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox input[type="checkbox"] + label::after {
+        content: none; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox input[type="checkbox"]:checked + label::after {
+        content: "";
+        color: #FFFFFF; }
+      .setting-section .offer__header .estate__table .estate__item .checkbox input[type="checkbox"]:checked + label::before {
+        background-color: #ed7e2e;
+        border: 2px solid #ed7e2e; }
+    .setting-section .offer__header .Table__title {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 50px 0 30px 0; }
+      .setting-section .offer__header .Table__title p {
+        color: #1e1e1c;
+        font-family: Roboto, serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        margin: 0; }
+      .setting-section .offer__header .Table__title .btn {
+        display: grid;
+        justify-self: end;
+        width: 178px;
+        height: 40px;
+        border-radius: 3px;
+        background: #a4be8f; }
+        .setting-section .offer__header .Table__title .btn a {
+          display: grid;
+          width: 100%;
+          height: 100%;
+          grid-template-columns: 1fr 3fr;
+          justify-items: center;
+          align-items: center; }
+          .setting-section .offer__header .Table__title .btn a p {
+            font-size: 16px;
+            margin: 0; }
+    .setting-section .offer__header .type__table .item--hover:nth-child(2n) {
+      background-color: #ffffff; }
+    .setting-section .offer__header .type__table .type__item {
+      width: 100%;
+      height: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      border-radius: 4px;
+      background: #FAFAFA;
+      text-align: center; }
+      .setting-section .offer__header .type__table .type__item .activity {
+        border-right: solid 1px var(--border-color);
+        border-left: solid 1px var(--border-color);
+        display: grid; }
+      .setting-section .offer__header .type__table .type__item .close {
+        display: grid;
+        justify-items: end;
+        align-items: center; }
+        .setting-section .offer__header .type__table .type__item .close i {
+          font-size: 12px;
+          padding-right: 5px; }
+      .setting-section .offer__header .type__table .type__item .type {
+        display: grid;
+        align-items: center; }
+      .setting-section .offer__header .type__table .type__item .checkbox input[type="checkbox"] {
+        opacity: 0;
+        width: 0; }
+      .setting-section .offer__header .type__table .type__item .checkbox label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px; }
+      .setting-section .offer__header .type__table .type__item .checkbox label::before,
+      .setting-section .offer__header .type__table .type__item .checkbox label::after {
+        position: absolute;
+        content: "";
+        display: inline-block; }
+      .setting-section .offer__header .type__table .type__item .checkbox label::before {
+        height: 16px;
+        width: 16px;
+        border: 2px solid #e8e8e8;
+        border-radius: 2px;
+        left: 10px;
+        top: 8px; }
+      .setting-section .offer__header .type__table .type__item .checkbox label::after {
+        height: 5px;
+        width: 9px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        left: 14px;
+        top: 12px; }
+      .setting-section .offer__header .type__table .type__item .checkbox input[type="checkbox"] + label::after {
+        content: none; }
+      .setting-section .offer__header .type__table .type__item .checkbox input[type="checkbox"]:checked + label::after {
+        content: "";
+        color: #FFFFFF; }
+      .setting-section .offer__header .type__table .type__item .checkbox input[type="checkbox"]:checked + label::before {
+        background-color: #ed7e2e;
+        border: 2px solid #ed7e2e; }
+
+.btn--submit {
+    background-color: var(--main-color);
+    width: 166px;
+    height: 40px;
+    box-shadow: 0 11px 24px var(--main-color);
+    border-radius: 3px;
+    margin: 29px auto 0;
+}
+          .btn--submit input[type=submit] {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-items: center;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF; 
+            border: none;
+            background: none;
+            cursor: pointer;}

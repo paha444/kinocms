@@ -1,0 +1,383 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  overflow-x: hidden; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+
+a, a:hover, a:focus, a:active {
+  outline: none !important;
+  text-decoration: none;
+  color: #000; }
+
+:root {
+  --main-color: #ED7E2E;
+  --gutter:20px;
+  --actual-color:#74c143;
+  --rent-color: #dfc600;
+  --sales-color:#e45a56;
+  --signed-color:#62ba46;
+  --in-work-color:#e3cd40;
+  --paid--color:#2f66d2;
+  --input--color:#c6c8c5;
+  --border-color:rgba(6, 43, 94, 0.14); }
+
+.add-selection {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 265px 1fr;
+  position: relative; }
+  .add-selection .content {
+    position: relative;
+    z-index: 1;
+    background: #FAFAFA; }
+    .add-selection .content .top__line {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 50px 30px 0 50px;
+      /*style the arrow inside the select element:*/
+      /*point the arrow upwards when the select box is open (active):*/
+      /*style the items (options), including the selected item:*/
+      /*style items (options):*/ }
+      .add-selection .content .top__line .btn--submit {
+        background-color: var(--main-color);
+        width: 166px;
+        height: 40px;
+        border-radius: 3px;
+        display: grid;
+        justify-self: end; }
+        .add-selection .content .top__line .btn--submit a {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-items: center;
+          font-size: 16px;
+          line-height: 19px;
+          color: #FFFFFF; }
+      .add-selection .content .top__line .back__to_prev a {
+        display: grid;
+        grid-template-columns: 10px 1fr;
+        grid-gap: 10px;
+        align-items: center; }
+        .add-selection .content .top__line .back__to_prev a i {
+          font-size: 12px;
+          color: var(--main-color); }
+        .add-selection .content .top__line .back__to_prev a p {
+          font-style: normal;
+          font-size: 14px;
+          line-height: 16px;
+          text-decoration-line: underline;
+          color: var(--main-color); }
+      .add-selection .content .top__line .custom-select {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        display: grid;
+        justify-self: center; }
+      .add-selection .content .top__line .custom-select select {
+        display: none;
+        /*hide original SELECT element:*/ }
+      .add-selection .content .top__line .select-selected {
+        height: 36px;
+        border: 1px solid #E8E8E8;
+        border-radius: 2px;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 19px; }
+      .add-selection .content .top__line .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #000000 transparent transparent transparent; }
+      .add-selection .content .top__line .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #000000 transparent;
+        top: 7px; }
+      .add-selection .content .top__line .select-items div, .add-selection .content .top__line .select-selected {
+        color: #000000;
+        padding: 6px 16px;
+        border: 2px solid transparent;
+        border-color: #eff1ef;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px; }
+      .add-selection .content .top__line .select-items {
+        position: absolute;
+        background-color: white;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        font-size: 16px;
+        line-height: 19px; }
+      .add-selection .content .top__line .select-hide {
+        display: none; }
+      .add-selection .content .top__line .select-items div:hover, .add-selection .content .top__line .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1); }
+      .add-selection .content .top__line .selection__description {
+        position: absolute;
+        left: -75px;
+        bottom: 50%;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1D1E1C; }
+      .add-selection .content .top__line .wrap__select .select__image a {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: var(--main-color); }
+      .add-selection .content .top__line .wrap__select p {
+        font-size: 12px;
+        line-height: 14px;
+        color: #727272; }
+    .add-selection .content .container {
+      width: 100%;
+      padding: 150px 50px 150px 250px; }
+      .add-selection .content .container .inner_wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+      .add-selection .content .container .left__side {
+        width: 300px; }
+        .add-selection .content .container .left__side .input__description {
+          position: absolute;
+          left: 30px;
+          text-align: right; }
+          .add-selection .content .container .left__side .input__description .documents {
+            margin-top: 50px; }
+          .add-selection .content .container .left__side .input__description .description__item {
+            height: 45px;
+            padding-bottom: 10px;
+            display: grid;
+            align-items: center;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1D1E1C; }
+          .add-selection .content .container .left__side .input__description .item__gender {
+            margin-top: 6px;
+            padding-bottom: 5px;
+            height: 40px; }
+          .add-selection .content .container .left__side .input__description .select-pad {
+            margin-bottom: 10px; }
+          .add-selection .content .container .left__side .input__description .custom-item {
+            padding-bottom: 21px; }
+        .add-selection .content .container .left__side .input__wrapper {
+          position: relative;
+          padding-bottom: 10px;
+          /*Outer box of the fake checkbox*/
+          /*Checkmark of the fake checkbox*/
+          /*Hide the checkmark by default*/
+          /*Unhide on the checked state*/ }
+          .add-selection .content .container .left__side .input__wrapper input {
+            width: 100%;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            outline: none;
+            border-radius: 2px; }
+          .add-selection .content .container .left__side .input__wrapper i {
+            position: absolute;
+            right: 7px;
+            top: 9px;
+            cursor: pointer;
+            color: #1d1e1c;
+            opacity: 0.25; }
+          .add-selection .content .container .left__side .input__wrapper .inner__check {
+            position: absolute;
+            right: -190px; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox input[type="checkbox"] {
+            opacity: 0;
+            width: 0; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox label {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 22px;
+            padding-bottom: 20px; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox label::before,
+          .add-selection .content .container .left__side .input__wrapper .checkbox label::after {
+            position: absolute;
+            content: "";
+            display: inline-block; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox label::before {
+            height: 16px;
+            width: 16px;
+            border: 2px solid grey;
+            border-radius: 2px;
+            left: 0;
+            top: 4px; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox label::after {
+            height: 5px;
+            width: 9px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+            left: 4px;
+            top: 8px; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox input[type="checkbox"] + label::after {
+            content: none; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox input[type="checkbox"]:checked + label::after {
+            content: "";
+            color: #FFFFFF; }
+          .add-selection .content .container .left__side .input__wrapper .checkbox input[type="checkbox"]:checked + label::before {
+            background-color: #ed7e2e;
+            border: 2px solid #ed7e2e; }
+        .add-selection .content .container .left__side .wrap__selection {
+          display: grid;
+          grid-gap: 15px;
+          padding-bottom: 10px; }
+        .add-selection .content .container .left__side .check-gender {
+          font-size: 12px;
+          line-height: 23px;
+          color: #727272;
+          /*Outer box of the fake checkbox*/
+          /*Checkmark of the fake checkbox*/
+          /*Hide the checkmark by default*/
+          /*Unhide on the checked state*/
+          /*Adding focus styles on the outer-box of the fake checkbox*/ }
+          .add-selection .content .container .left__side .check-gender .checkbox {
+            display: grid; }
+          .add-selection .content .container .left__side .check-gender .checkbox input[type="checkbox"] {
+            opacity: 0;
+            width: 0; }
+          .add-selection .content .container .left__side .check-gender .checkbox label {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 22px;
+            padding-bottom: 20px; }
+          .add-selection .content .container .left__side .check-gender .checkbox label::before,
+          .add-selection .content .container .left__side .check-gender .checkbox label::after {
+            position: absolute;
+            content: "";
+            display: inline-block; }
+          .add-selection .content .container .left__side .check-gender .checkbox label::before {
+            height: 16px;
+            width: 16px;
+            border: 2px solid grey;
+            border-radius: 2px;
+            left: 0;
+            top: 3px; }
+          .add-selection .content .container .left__side .check-gender .checkbox label::after {
+            height: 5px;
+            width: 9px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+            left: 4px;
+            top: 7px; }
+          .add-selection .content .container .left__side .check-gender .checkbox input[type="checkbox"] + label::after {
+            content: none; }
+          .add-selection .content .container .left__side .check-gender .checkbox input[type="checkbox"]:checked + label::after {
+            content: "";
+            color: #FFFFFF; }
+          .add-selection .content .container .left__side .check-gender .checkbox input[type="checkbox"]:checked + label::before {
+            background-color: #ed7e2e;
+            border: 2px solid #ed7e2e; }
+          .add-selection .content .container .left__side .check-gender .checkbox input[type="checkbox"]:focus + label::before {
+            /*     outline: rgb(59, 153, 252) auto 5px; */ }
+
+.add-selection .content .container .left__side .wrap__selection {
+  /*style the arrow inside the select element:*/
+  /*point the arrow upwards when the select box is open (active):*/
+  /*style the items (options), including the selected item:*/
+  /*style items (options):*/
+  /*hide the items when the select box is closed:*/ }
+  .add-selection .content .container .left__side .wrap__selection .custom-select {
+    position: relative;
+    z-index: 5; }
+  .add-selection .content .container .left__side .wrap__selection .custom-select select {
+    display: none;
+    /*hide original SELECT element:*/ }
+  .add-selection .content .container .left__side .wrap__selection .select-selected {
+    height: 36px;
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 19px; }
+  .add-selection .content .container .left__side .wrap__selection .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #ed7e2e transparent transparent transparent; }
+  .add-selection .content .container .left__side .wrap__selection .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #ed7e2e transparent;
+    top: 7px; }
+  .add-selection .content .container .left__side .wrap__selection .select-items div, .add-selection .content .container .left__side .wrap__selection .select-selected {
+    color: #c6c8c5;
+    padding: 6px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none; }
+  .add-selection .content .container .left__side .wrap__selection .select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-size: 16px;
+    line-height: 19px; }
+  .add-selection .content .container .left__side .wrap__selection .select-hide {
+    display: none; }
+  .add-selection .content .container .left__side .wrap__selection .select-items div:hover, .add-selection .content .container .left__side .wrap__selection .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+input {
+  outline:none !important;
+}
+

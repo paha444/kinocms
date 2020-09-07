@@ -1,0 +1,433 @@
+@import "_components.scss";
+@import "_var.scss";
+
+
+//
+
+
+.data {
+   width: 100%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 265px 1fr;
+   position: relative;
+
+   & .content {
+      position: relative;
+      z-index: 1;
+      background: #FAFAFA;
+
+      & .container {
+         width: 100%;
+         padding: 150px 50px 150px 200px;
+
+         & .top__line {
+            position: relative;
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            margin-bottom: 40px;
+            & .selection__description {
+               position: absolute;
+               left: -75px;
+               bottom: 50%;
+               font-size: 16px;
+               line-height: 19px;
+               color: #1D1E1C;
+            }
+            & .wrap__select {
+               & .select__image{
+                  & a {
+                     font-size: 14px;
+                     line-height: 16px;
+                     text-decoration-line: underline;
+                     color: var(--main-color);
+                  }
+               }
+               & p {
+
+                  font-size: 12px;
+                  line-height: 14px;
+                  color: #727272;
+               }
+            }
+
+         }
+
+         & .inner_wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+         }
+
+         & .left__side {
+            padding-right: 200px;
+            & .input__description {
+               position: absolute;
+               left: 60px;
+               text-align: right;
+               & .description__item {
+                  height: 45px;
+                  padding-bottom: 10px;
+                  display: grid;
+                  align-items: center;
+                  font-size: 16px;
+                  line-height: 19px;
+                  color: #1D1E1C;
+               }
+               & .item__gender {
+                  margin-top: 6px;
+               }
+            }
+
+            & .input__wrapper {
+               position: relative;
+               padding-bottom: 10px;
+
+               & input {
+                  width: 100%;
+                  height: 36px;
+                  background: #FFFFFF;
+                  border: 1px solid #E8E8E8;
+                  border-radius: 2px;
+               }
+
+               & i {
+                  position: absolute;
+                  right: 20px;
+                  top: 9px;
+                  cursor: pointer;
+                  color: #1d1e1c;
+                  opacity: 0.25;
+               }
+            }
+
+            & .wrap__selection {
+               display: grid;
+               grid-template-columns: min-content min-content min-content;
+               grid-gap: 15px;
+               padding-bottom: 10px;
+               @extend %data-custom-select;
+            }
+            & .check-gender {
+               padding: 10px 0;
+               font-size: 12px;
+               line-height: 23px;
+               color: #727272;
+               .checkbox input[type="checkbox"] {
+                  opacity: 0;
+                  width: 0;
+               }
+
+               .checkbox label {
+                  position: relative;
+                  display: inline-block;
+                  cursor: pointer;
+
+                  /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+                  padding-left: 22px;
+               }
+
+               .checkbox label::before,
+               .checkbox label::after {
+                  position: absolute;
+                  content: "";
+
+                  /*Needed for the line-height to take effect*/
+                  display: inline-block;
+               }
+
+               /*Outer box of the fake checkbox*/
+               .checkbox label::before{
+                  height: 16px;
+                  width: 16px;
+                  border: 2px solid grey;
+                  border-radius: 2px;
+                  left: 0;
+                  /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+                   *to vertically center it.
+                   */
+                  top: 3px;
+
+               }
+
+               /*Checkmark of the fake checkbox*/
+               .checkbox label::after {
+                  height: 5px;
+                  width: 9px;
+                  border-left: 2px solid;
+                  border-bottom: 2px solid;
+
+                  transform: rotate(-45deg);
+
+                  left: 4px;
+                  top: 7px;
+               }
+
+               /*Hide the checkmark by default*/
+               .checkbox input[type="checkbox"] + label::after {
+                  content: none;
+               }
+
+               /*Unhide on the checked state*/
+               .checkbox input[type="checkbox"]:checked + label::after {
+                  content: "";
+                  color: #FFFFFF;
+               }
+               .checkbox input[type="checkbox"]:checked + label::before {
+                  background-color: #ed7e2e;
+                  border: 2px solid #ed7e2e;
+
+               }
+               /*Adding focus styles on the outer-box of the fake checkbox*/
+               .checkbox input[type="checkbox"]:focus + label::before {
+                  /*     outline: rgb(59, 153, 252) auto 5px; */
+               }
+
+
+            }
+            & .btn--submit {
+               background-color: var(--main-color);
+               width: 166px;
+               height: 40px;
+               box-shadow: 0 11px 24px var(--main-color);
+               border-radius: 3px;
+               margin-top: 20px;
+               & a {
+                  display: grid;
+                  width: 100%;
+                  height: 100%;
+                  align-items: center;
+                  justify-items: center;
+                  font-size: 16px;
+                  line-height: 19px;
+                  color: #FFFFFF;
+
+               }
+               
+            }
+
+         }
+         & .right__side {
+            padding-right: 200px;
+           & .input__search {
+              padding-bottom: 20px;
+              position: relative;
+              & input {
+                 width: 100%;
+                 height: 40px;
+                 background: #FFFFFF;
+                 border: 1px solid #E8E8E8;
+                 border-radius: 2px;
+              }
+              & input[type="text"] {
+                 padding-left: 10px;
+
+              }
+              & input::placeholder {
+                 font-size: 12px;
+                 color: #a8a9ab;
+              }
+              & .btn--search {
+                 position: absolute;
+                 top: 0;
+                 right: 0;
+                 height: 40px;
+                 width: 109px;
+                 background: var(--main-color);
+                 border-radius: 2px;
+                 & a {
+                    display: grid;
+                    justify-items: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                 }
+              }
+           }
+            & .map__location {
+               & img {
+                  width: 100%;
+               }
+            }
+            & .map__description {
+               display: grid;
+               grid-template-columns: 40px 1fr;
+               align-items: center;
+               margin-top: 10px;
+               & i {
+                  color: black;
+                  font-size: 25px;
+               }
+               p {
+                  font-size: 16px;
+                  line-height: 19px;
+                  color: #1D1E1C;
+                  margin: 0;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+%data-custom-select {
+   .custom-select {
+      position: relative;
+      z-index: 5;
+   }
+
+   .custom-select select {
+      display: none; /*hide original SELECT element:*/
+   }
+
+   .select-selected {
+      height: 36px;
+      border: 1px solid #E8E8E8;
+      border-radius: 2px;
+      background-color: #fff;
+      font-size: 16px;
+      line-height: 19px;
+   }
+
+   /*style the arrow inside the select element:*/
+   .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #ed7e2e transparent transparent transparent;
+   }
+
+   /*point the arrow upwards when the select box is open (active):*/
+   .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #ed7e2e transparent;
+      top: 7px;
+   }
+
+   /*style the items (options), including the selected item:*/
+   .select-items div, .select-selected {
+      color: #c6c8c5;
+      padding: 6px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+      user-select: none;
+   }
+
+   /*style items (options):*/
+   .select-items {
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      font-size: 16px;
+      line-height: 19px;
+   }
+
+   /*hide the items when the select box is closed:*/
+   .select-hide {
+      display: none;
+   }
+
+   .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+   }
+
+}
+
+
+
+@media only screen and (max-width : 1600px) {
+   .data .content .container .right__side{
+      padding-right: 0;
+   }
+   .data .content .container .left__side{
+      padding-right: 100px;
+   }
+}
+
+@media only screen and (max-width : 1366px) {
+   padding: 60px 50px 20px 200px;
+}
+
+
+@media only screen and (max-width : 1024px) {
+  .menu {
+     display: none;
+  }
+   .data {
+      grid-template-columns: 1fr;
+   }
+   .data .content .container{
+      padding: 50px 50px 150px 200px;
+   }
+   .data .content .container .left__side{
+      padding-right: 40px;
+   }
+}
+
+
+@media only screen and (max-width : 769px) {
+   .data .content .container .inner_wrap{
+      grid-template-columns: 1fr;
+   }
+   .data .content .container .left__side .input__description{
+      left: 15px;
+   }
+   .data .content .container{
+      padding: 50px 50px 150px 150px;
+   }
+   .data .content .container .right__side{
+      margin-top: 50px;
+   }
+}
+
+@media only screen and (max-width : 420px) {
+  .data{
+     & .content {
+        & .container {
+           padding: var(--gutter);
+           & .top__line {
+              & .selection__description{
+                 display: none;
+              }
+           }
+           & .left__side {
+              padding-right: 0;
+              display: grid;
+              justify-items: right;
+              & .input__description {
+                 z-index: 5;
+                 text-align: left;
+                 left: 30px;
+                 & .your__date {
+                    opacity: 0;
+                    z-index: 1;
+                    width: 0;
+                    visibility: hidden;
+                 }
+              }
+              & .input__wrapper {
+
+
+              }
+           }
+        }
+     }
+  }
+}
+@media only screen and (max-width : 320px) {
+   .data .content .container .left__side .wrap__selection {
+      & .custom-select:nth-child(2){
+         width: 100px !important;
+      }
+      & .custom-select:nth-child(3){
+         width: 80px !important;
+      }
+   }
+}

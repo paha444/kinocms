@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="69px" height="36px" viewBox="0 0 69 36" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Group-38" transform="translate(0.5 0.5)" opacity="0.8">
+    <path d="M0 25L38 25L38 0L0 0L0 25Z" transform="translate(15 0)" id="Stroke-1" fill="none" stroke="#05295F" stroke-width="1" />
+    <g id="Group-37" transform="translate(0 4)">
+      <path d="M10.7331 1.76705C10.7331 1.76705 6.19492 6.62643 2.16102 2.50332L0 0" transform="translate(4.341973 9.381006)" id="Stroke-2" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M0 1.76705C0 1.76705 4.53814 6.62643 8.57203 2.50332L10.7331 0" transform="translate(52.82079 9.381006)" id="Stroke-4" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M0 0C0 0 3.02542 4.41762 5.47458 0.957151" transform="translate(0.2360407 7.098569)" id="Stroke-6" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M5.47458 0C5.47458 0 2.44915 4.41762 0 0.957151" transform="translate(62.07685 7.098569)" id="Stroke-8" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M0.012637 0C0.012637 0 -0.707702 3.5341 8.72874 4.85938C18.1652 6.18467 19.894 5.74291 19.966 6.18467C20.0381 6.62643 17.877 9.42426 17.877 9.42426" transform="translate(24.71493 20.94045)" id="Stroke-10" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M19.9552 0C19.9552 0 20.6755 3.5341 11.239 4.85938C1.80261 6.18467 0.0737955 5.74291 0.00176165 6.18467C-0.0702723 6.62643 2.09074 9.42426 2.09074 9.42426" transform="translate(23.14279 20.94045)" id="Stroke-12" fill="none" stroke="#05295F" stroke-width="1" />
+      <path d="M3.5458 0C5.03719 0 6.2462 1.24224 6.2462 2.77368C6.2462 4.30571 5.03719 5.54676 3.5458 5.54676C2.05441 5.54676 0.845966 4.30571 0.845966 2.77368C0.845966 1.24224 2.05441 0 3.5458 0ZM0 20.172C0.0374576 20.112 0.0633898 20.0754 0.0633898 20.0754L6.70203 10.835C8.00613 9.01902 9.31139 10.835 9.31139 10.835L11.817 14.3237L18.6297 4.84407C19.9338 3.02813 21.2396 4.84407 21.2396 4.84407L32.2481 20.162C32.2504 20.1661 32.2522 20.1685 32.2556 20.172L0 20.172Z" transform="translate(20.56528 0.4724321)" id="Fill-35" fill="#05295F" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>
